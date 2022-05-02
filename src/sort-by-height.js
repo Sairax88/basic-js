@@ -12,8 +12,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
 function sortByHeight(arr) {
-  
+  const count = arr.filter(elem => elem !== -1).sort((a, b) =>  a - b);
+  const res = arr.map(elem => {
+    if (elem === -1) {
+      return elem
+    } else {
+      return count.shift()
+    }
+  })
+  return res
 }
+
 
 module.exports = {
   sortByHeight
