@@ -16,7 +16,7 @@ function getSeason(date) {
   if (date.getMonth() > 4 && date.getMonth() < 8) return "summer";
   if (date.getMonth() > 7 && date.getMonth() < 11) return "fall";
   if (date.getMonth() < 2 || date.getMonth() == 11) return "winter";
-  else ('fakeDate');
+  else ("Invalid date!");
   return date
 }
 
